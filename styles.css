@@ -7,8 +7,8 @@
         box-sizing: inherit;
     }
     body{
-        width: 100%;
-        height:100%;
+        width: 100vw;
+        height:100vh;
         margin: 0px;
 
     }
@@ -107,19 +107,13 @@
         display: none;
     }
 @media all and (min-width:600px) {
-    body{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    }
     .container {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         width: 60rem; 
         height: inherit;
+        margin: auto;
     }
     .sedans {
         border-radius: 10px 0px 0px 10px;  
@@ -135,7 +129,7 @@
         justify-content: space-evenly;
         padding:10px 30px;
         line-height: 0px;
-        height: 35rem;
+        height: 28rem;
     }
      p{
         padding-bottom: 25px;
