@@ -10,7 +10,6 @@
         width: 100vw;
         height:100vh;
         margin: 0px;
-
     }
     img {
         width: 50px;
@@ -32,7 +31,6 @@
         font-size: 16px;
         line-height:30px;
         margin: 0px 0px 20px 0px;
-
     }
     .container {
         display: flex;
@@ -40,18 +38,21 @@
         flex-wrap:wrap;
         align-items: center;
         justify-content:center;
-        width: 17rem ;
+        width: 17rem;
         height:100vh;
         margin: 10px auto;
     }
-    .sedans, .suvs, .luxury {
+    .sedans,
+    .suvs,
+    .luxury {
         display: flex;
         flex-direction:column;
         align-items: left;
         justify-content: center;
         padding:20px 50px;
         line-height: 25px;
-        height: 32rem;
+        width: 20rem;
+        height: 30rem;
         gap: 5px;
     }
     .sedans {
@@ -65,7 +66,6 @@
         background-color:hsl(179, 100%, 13%);
         border-radius: 0px 0px 10px 10px;
     }  
-
     .btn {
         width: 8.7rem;
         height: 2.9rem;
@@ -106,26 +106,95 @@
     .attribution{
         display: none;
     }
+
+
 @media all and (min-width:600px) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .top{
+        display: flex;
+        width: 600px;
+    }
+    .bottom{
+        width: 600px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: inherit; 
+        height: auto;
+    }
+    .sedans {
+        border-radius: 10px 0px 0px 0px;  
+    }
+    .suvs{
+        border-radius: 0px 10px 0px 0px;
+    }
+    .bottom .luxury {
+        border-radius: 0px 0px 10px 10px;
+        padding: 10px 120px;
+        align-items: center;
+        justify-content: center;
+        width: inherit;
+        gap: 15px;
+        height: 23rem;
+    }  
+    .bottom-center{
+        text-align: center;
+    }
+    .sedans,
+    .suvs,
+    .luxury {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding:10px 30px;
+        line-height: 0px;
+        height: 28rem;
+    }
+     p{
+        padding-bottom: 20px;
+        font-size: 14px;
+        text-align: center;
+     }  
+    h2{
+        font-size: 37px;
+        padding-bottom: 0px;
+    }
+    .attribution{
+        display: block;
+    }
+}
+
+
+
+@media all and (min-width:990px) {
     .container {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 60rem; 
+        width: 65rem; 
         height: inherit;
         margin: auto;
     }
     .sedans {
         border-radius: 10px 0px 0px 10px;  
+    } 
+    .suvs{
+        border-radius: 0px 0px;
     }
-
-    .luxury {
-        border-radius: 0px 10px 10px 0px;
-    }  
-    .sedans, .suvs, .luxury {
+    .sedans,
+    .suvs,
+    .bottom .luxury{
         display: flex;
         flex-direction:column;
-        align-items: left;
+        align-items: initial;
         justify-content: space-evenly;
         padding:10px 30px;
         line-height: 0px;
@@ -134,6 +203,7 @@
      p{
         padding-bottom: 25px;
         font-size: 14px;
+        text-align: left;
      }  
     h2{
          font-size: 37px;
@@ -141,5 +211,24 @@
     }
     .attribution{
         display: block;
+    }
+    .top{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 28rem;
+        width: 60rem;
+    }
+    .bottom .luxury {
+        border-radius: 0px 10px 10px 0px;
+        padding:10px 30px;
+        align-items: initial;
+        justify-content: space-around;
+        width: 20rem;
+        gap: 0px;
+        height: 28rem;
+    }
+    .bottom-center{
+        text-align: left;
     }
 }
