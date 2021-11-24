@@ -6,10 +6,19 @@
     *, *:before, *:after {
         box-sizing: inherit;
     }
+    a:not([class]) {
+        text-decoration-skip-ink: auto;
+      }
     body{
-        width: 100vw;
-        height:100vh;
+        min-height:100vh;
         margin: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        padding: 1rem;
+        font-size: 0.875rem;
+        text-align: center;
     }
     img {
         width: 50px;
@@ -32,14 +41,22 @@
         line-height:30px;
         margin: 0px 0px 20px 0px;
     }
+    .sr-only{
+        position: absolute;
+        top: auto;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap;
+    }
     .container {
         display: flex;
         flex-direction:row;
         flex-wrap:wrap;
         align-items: center;
         justify-content:center;
-        width: 17rem;
-        height:100vh;
+        width: inherit;
         margin: 10px auto;
     }
     .sedans,
@@ -67,14 +84,17 @@
         border-radius: 0px 0px 10px 10px;
     }  
     .btn {
+        display: flex;
         width: 8.7rem;
         height: 2.9rem;
         border-radius: 25px;
-        border:none;
         background-color: hsl(0, 0%, 95%);
         font-family:'Lexend Deca', sans-serif ;
         font-weight: 400;
         font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
     }
     .btn.one {
         color:hsl(31, 77%, 52%);
@@ -126,8 +146,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: inherit; 
-        height: auto;
     }
     .sedans {
         border-radius: 10px 0px 0px 0px;  
@@ -179,8 +197,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 65rem; 
-        height: inherit;
+        width: 57rem; 
         margin: auto;
     }
     .sedans {
@@ -196,21 +213,19 @@
         flex-direction:column;
         align-items: initial;
         justify-content: space-evenly;
-        padding:10px 30px;
+        padding:10px 40px;
         line-height: 0px;
         height: 28rem;
+        width: 19rem;
     }
      p{
         padding-bottom: 25px;
         font-size: 14px;
         text-align: left;
-     }  
+    }  
     h2{
          font-size: 37px;
         padding-bottom: 0px;
-    }
-    .attribution{
-        display: block;
     }
     .top{
         display: flex;
@@ -223,12 +238,15 @@
         border-radius: 0px 10px 10px 0px;
         padding:10px 30px;
         align-items: initial;
-        justify-content: space-around;
-        width: 20rem;
+        justify-content: space-evenly;
+        width: 19rem;
         gap: 0px;
         height: 28rem;
     }
     .bottom-center{
         text-align: left;
+    }
+    .bottom{
+        width: 20rem;
     }
 }
